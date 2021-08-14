@@ -2,3 +2,5 @@ django_sandbox.venv/
 .idea/
 */django_sandbox/__pycache__/
 db.sqlite3
+django_sandbox/*/migrations/
+django_sandbox/*/__pycache__/
