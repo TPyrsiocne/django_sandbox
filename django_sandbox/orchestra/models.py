@@ -16,3 +16,6 @@ class Musician(models.Model):
     def __str__(self):
         return self.name
 
+
+class Good_Musician(Musician):
+    has_donated = models.IntegerField(default=0)
