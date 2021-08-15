@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'graph.apps.GraphConfig',
     'orchestra.apps.OrchestraConfig',
     'django.contrib.admin',
     'django.contrib.auth',
