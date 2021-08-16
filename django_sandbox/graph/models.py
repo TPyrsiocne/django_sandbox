@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Node(models.Model):
-    points_to = models.ManyToManyField("self",symmetrical=False,through='Edge')
+    points_to = models.ManyToManyField("self", symmetrical=False, through='Edge')
     label = models.CharField(max_length=10)
 
     def __str__(self):
@@ -17,6 +17,3 @@ class Edge(models.Model):
 
     def __str__(self):
         return self.from_node.label + " -> " + self.to_node.label
-
-
-
