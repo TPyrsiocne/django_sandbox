@@ -9,6 +9,7 @@ class Node(models.Model):
         return self.label
 
 
+
 class Edge(models.Model):
     #not sure what 'on_delete = models.CASCADE' does
     from_node = models.ForeignKey(Node, related_name = 'from_node',on_delete=models.CASCADE)
