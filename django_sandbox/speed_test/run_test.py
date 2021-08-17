@@ -8,5 +8,11 @@ def rand_string(n):
         str = str + random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
     return str
 
-for i in range(1000)
-    Person(identification_string = rand_string(50)).save()
+
+Person.objects.all().delete()
+print("database cleared...")
+
+for i in range(100):
+    for j in range(10000):
+        Person(identification_string = rand_string(50)).save()
+    print(str((i+1)*10000) + " entered")
