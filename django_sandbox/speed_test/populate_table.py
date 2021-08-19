@@ -1,6 +1,9 @@
 from speed_test.models import Person
 import random
 
+""" 
+populate table clears table and popluates it with 10^6 randomly named people
+"""
 
 def rand_string(n):
     str = ""
