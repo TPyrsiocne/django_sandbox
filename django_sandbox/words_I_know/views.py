@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+def dashboard(request):
+    return render(request, "words_I_know/dashboard.html")

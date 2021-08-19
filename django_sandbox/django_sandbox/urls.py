@@ -18,6 +18,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('orchestra/', include('orchestra.urls')),
-    path('admin/', admin.site.urls),
+    path('words_I_know/',include('words_I_know.urls')),
+    path('words_I_know/admin/', admin.site.urls),
 ]
 

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'words_I_know.appls.WordsIKnowConfig',
+    'words_I_know.apps.WordsIKnowConfig',
     'speed_test.apps.SpeedTestConfig',
     'graph.apps.GraphConfig',
     'orchestra.apps.OrchestraConfig',

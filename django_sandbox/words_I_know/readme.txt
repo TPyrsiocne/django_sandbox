@@ -1,7 +1,7 @@
 words_I_know
-this app is intened to be an exploration of django user management.
+this app is intended to be an exploration of django user management.
 
-intended functionalty:
+intended functionality:
 
 the app will store a global dictionary of words.
 Users can create accounts with their own password and login name.
