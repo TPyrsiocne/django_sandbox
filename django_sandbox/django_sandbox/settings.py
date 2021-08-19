@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "speed_test.apps.SpeedTestConfig",
+    'words_I_know.appls.WordsIKnowConfig',
+    'speed_test.apps.SpeedTestConfig',
     'graph.apps.GraphConfig',
     'orchestra.apps.OrchestraConfig',
     'django.contrib.admin',
