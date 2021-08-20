@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ol>
+    {% for word in word_list%}
+    <li> {{word.word_txt}} </li>
+    {% endfor %}
+</ol>
+{% endblock %}
