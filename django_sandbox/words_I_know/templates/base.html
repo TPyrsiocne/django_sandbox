@@ -1,3 +1,22 @@
-<h1>Welcome to Word Tracker</h1>
+<style>
+.footer {
+  position: fixed;
+  left: 10;
+  bottom: 10;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: left;
+}
+</style>
+
+<h1>===Welcome to Word Tracker===</h1>
 {% block content %}
 {% endblock %}
+
+<div class="footer">
+<a href="{% url 'dashboard' %}"> DASHBOARD</a>
+{% if user.is_authenticated %}
+ <a href="{% url 'word_list' %}"> WORD LIST</a> <br>
+{% endif %}
+</div>

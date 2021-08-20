@@ -22,3 +22,7 @@ def register(request):
 
 def word_list(request):
     return render(request, 'words_I_know/word_list.html', { 'word_list' : Word.objects.all()})
+
+def word_defintion(request, wrd):
+    this_word = Word.objects.filter(word_txt = wrd).first()
+    return render(request, 'words_I_know/word_definition.html',{'this_word' : this_word})

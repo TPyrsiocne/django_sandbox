@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<title> word list </title>
 <ol>
     {% for word in word_list%}
-    <li> {{word.word_txt}} </li>
+    <li> <a href = "/words_I_know/word_definition/{{word.word_txt}}"> {{word.word_txt}} </a> </li>
     {% endfor %}
 </ol>
+
 {% endblock %}
