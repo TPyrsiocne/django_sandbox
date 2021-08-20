@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> There was an error creating your account</h2>
+<h3>it could be that:</h3>
+<ul>
+    <li> your passwords didn't match</li>
+    <li> you did not choose an acceptable password</li>
+    <li> your username was already taken</li>
+</ul>
+
+<a href="{% url 'login' %}">Back to login</a>
+{% endblock %}
