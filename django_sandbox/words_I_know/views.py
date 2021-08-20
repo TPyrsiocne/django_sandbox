@@ -17,7 +17,7 @@ def register(request):
             login(request, user)
             return redirect(reverse('dashboard'))
         else:
-            return render(request, 'words_I_know/invalid_username.html')
+            return render(request, 'words_I_know/invalid_registration.html')
 
 
 def word_list(request):

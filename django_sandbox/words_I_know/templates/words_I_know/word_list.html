@@ -3,8 +3,14 @@
 {% block content %}
 <title> word list </title>
 <ol>
-    {% for word in word_list%}
-    <li> <a href = "/words_I_know/word_definition/{{word.word_txt}}"> {{word.word_txt}} </a> </li>
+    {% for word in word_list %}
+    <li>
+        <a {% if user in word.known_by.all%} style="color:DCDCDC;" {% else %} style="color:black;" {% endif %}
+           href = "/words_I_know/word_definition/{{word.word_txt}}"
+        >
+            {{word.word_txt}}
+        </a>
+    </li>
     {% endfor %}
 </ol>
 

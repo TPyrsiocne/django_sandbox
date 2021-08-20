@@ -2,7 +2,14 @@
 
 {% block content %}
 <title> {{this_word.word_txt}} </title>
-<h2> {{this_word.word_txt}}</h2>
+
+<h2  {% if user in this_word.known_by.all%} style="color:DCDCDC" {% else %} style="color:black" {% endif %}
+>
+    {{this_word.word_txt}}
+</h2>
+
+<p {% if user in this_word.known_by.all%} style="color:DCDCDC" {% else %} style="color:black" {% endif %}>
 {{this_word.pronunciation}}<br><br>
-{{this_word.definition}}
+{{this_word.definition}}<br><br>
+</p>
 {% endblock %}
