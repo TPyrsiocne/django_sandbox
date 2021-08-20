@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<title> {{this_word.word_txt}} </title>
-
+<title> {{this_word.word_txt}}</title>
 <h2  {% if user in this_word.known_by.all%} style="color:DCDCDC" {% else %} style="color:black" {% endif %}
 >
     {{this_word.word_txt}}
@@ -12,4 +11,10 @@
 {{this_word.pronunciation}}<br><br>
 {{this_word.definition}}<br><br>
 </p>
+
+<form action="toggle/">
+<button type="submit">  toggle know-state </button>
+</form>
+
+<a href = "/words_I_know/word_list/"> &lt&lt back to word list</a>
 {% endblock %}

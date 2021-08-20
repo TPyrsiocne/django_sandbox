@@ -21,8 +21,22 @@ def register(request):
 
 
 def word_list(request):
-    return render(request, 'words_I_know/word_list.html', { 'word_list' : Word.objects.all()})
+    return render(request, 'words_I_know/word_list.html', { 'word_list' : Word.objects.order_by('word_txt')})
 
-def word_defintion(request, wrd):
+def word_definition(request, wrd):
     this_word = Word.objects.filter(word_txt = wrd).first()
     return render(request, 'words_I_know/word_definition.html',{'this_word' : this_word})
+
+def toggle(request, wrd):
+    current_user = request.user
+    word_to_toggle = Word.objects.get(word_txt = wrd)
+
+    if current_user.is_authenticated:
+        if current_user in word_to_toggle.known_by.all():
+            word_to_toggle.known_by.remove(current_user)
+        else:
+            word_to_toggle.known_by.add(current_user)
+    else:
+        return redirect("/words_I_know/dashboard.html")
+
+    return redirect("/words_I_know/word_definition/" + wrd +"/")

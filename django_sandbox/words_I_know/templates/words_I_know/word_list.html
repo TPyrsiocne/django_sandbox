@@ -2,7 +2,8 @@
 
 {% block content %}
 <title> word list </title>
-<ol>
+<i>Gray words are ones the user knows. Black words still need to be learned.</i>
+<ul>
     {% for word in word_list %}
     <li>
         <a {% if user in word.known_by.all%} style="color:DCDCDC;" {% else %} style="color:black;" {% endif %}
@@ -12,6 +13,6 @@
         </a>
     </li>
     {% endfor %}
-</ol>
-
+</ul>
+<br><br><br><br>
 {% endblock %}
